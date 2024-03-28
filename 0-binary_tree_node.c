@@ -2,6 +2,7 @@
 
 /**
  * binary_tree_node - is a binary tree node
+ *
  * @parent: is a pointer to the parent node of the node to create
  * @value: is the value to put in the new in the new node
  *
