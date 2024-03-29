@@ -13,19 +13,20 @@
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 {
 	
-	binary_tree_t *new_node = NULL;
+	binary_tree_t *node = NULL;
 
 
-	new_node = malloc(sizeof(binary_tree_t));
+	node = malloc(sizeof(binary_tree_t));/* Allocate memory for node. */
 	
-	if (!new_node)
-		return (NULL);
-
-	new_node->parent = parent;
-	new_node->n = value;
-	new_node->left = NULL;
-	new_node->right = NULL;
-	return (new_node);
+	if (!node)
+	{
+		return (NULL);/* Return NULL if it fails. */
+        }
+	node->parent = parent;/* Initialize parent. */
+	node->n = value;/* Initialize value. */
+	node->left = NULL;/* Initialize left child as NULL. */
+	node->right = NULL;/* Initialize right child as NULL. */
+	return (node);/* Return the node. */
 
 
 }
